@@ -10,7 +10,7 @@ import java.util.Locale;
 
 public class GWD {
     private static ThreadLocal<WebDriver> threadDriver = new ThreadLocal<>();
-    public static ThreadLocal<String> threadBrowserName= new ThreadLocal<>();
+    public static ThreadLocal<String> threadBrowserName = new ThreadLocal<>();
 
     public static WebDriver getDriver() {
 
@@ -19,19 +19,20 @@ public class GWD {
         System.setProperty("user.language", "EN");
 
         if (threadBrowserName.get() == null) {
-
             threadBrowserName.set("firefox");
         }
 
         if (threadDriver.get() == null) {
-
-            switch (threadBrowserName.get()){
+            switch (threadBrowserName.get()) {
                 case "firefox":
                     threadDriver.set(new FirefoxDriver());
-                case "chrome":
-                    threadDriver.set(new ChromeDriver());
+                    break;
                 case "edge":
                     threadDriver.set(new EdgeDriver());
+                    break;
+                case "chrome":
+                    threadDriver.set(new ChromeDriver());
+                    break;
                 default:
                     threadDriver.set(new FirefoxDriver());
 
@@ -43,24 +44,25 @@ public class GWD {
         return threadDriver.get();
     }
 
+
     public static void quitDriver() {
 
-        try{
+        try {
             Thread.sleep(5000);
-        } catch (InterruptedException e){
+        } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
 
-        if (threadDriver.get() != null) {
+        if(threadDriver.get()!=null)
+        {
             threadDriver.get().quit();
 
-//            WebDriver driver = threadDriver.get();
-//            driver = null;
-//
-//            threadDriver.set(driver);
+            WebDriver driver = threadDriver.get();
+            driver = null;
 
-            threadDriver.set(null);
+            threadDriver.set(driver);
         }
+
     }
 
 }

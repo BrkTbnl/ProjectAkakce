@@ -9,11 +9,14 @@ public class TopNavigation extends Parent{
     public TopNavigation() {
         PageFactory.initElements(GWD.getDriver(), this);
     }
-    @FindBy(xpath = "(//a[text()=\"Hesap Aç\"])[1]")
+    @FindBy(xpath = "//div[@id=\"H_rl_v8\"]/a[1]")
     public WebElement createAccountButton;
 
-    @FindBy(xpath = "(//a[text()=\"Giriş Yap\"])[1]")
+    @FindBy(xpath = "//div[@id=\"H_rl_v8\"]/a[2]")
     public WebElement loginButton;
+
+    @FindBy(xpath = "//div[@id=\"HM_v8\"]/i/a")
+    public WebElement userNameLabel;
 
 
 
@@ -21,6 +24,7 @@ public class TopNavigation extends Parent{
         switch (strElement){
             case "createAccount": return this.createAccountButton;
             case "loginButton": return this.loginButton;
+            case "userNameLabel": return this.userNameLabel;
         }
         return null;
     }
