@@ -3,6 +3,7 @@ package Pages;
 import Utilities.GWD;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -50,6 +51,11 @@ public class Parent {
         wait.until(ExpectedConditions.elementToBeClickable(element));
         Select select = new Select(element);
         select.selectByVisibleText(VisibleText);
+    }
+
+    public void hoverOverElement(WebElement element) {
+        Actions actions = new Actions(GWD.getDriver());
+        actions.moveToElement(element).perform();
     }
 
 
