@@ -18,6 +18,9 @@ public class TopNavigation extends Parent{
     @FindBy(xpath = "//div[@id=\"HM_v8\"]/i/a")
     public WebElement userNameLabel;
 
+    @FindBy(xpath = "//a[@id=\"H_a_v8\"]")
+    public WebElement menuBar;
+
 
 
     public WebElement getWebElement(String strElement) {

@@ -61,6 +61,17 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "//div[@class=\"alertX t2\"]")
     public WebElement aletBoxLastName;
 
+    @FindBy(xpath = "//input[@id=\"life\"]")
+    public WebElement emailInputLoginPage;
+
+    @FindBy(xpath = "//input[@id=\"lifp\"]")
+    public WebElement passwordInputLoginPage;
+
+    @FindBy(xpath = "//input[@id=\"lfb\"]")
+    public WebElement loginButton;
+
+    @FindBy(xpath = "//a[@href=\"#Çık\"]")
+    public WebElement logoutButton;
 
     public WebElement getWebElement(String strElement){
         switch (strElement){
