@@ -59,7 +59,7 @@ public class DialogContent extends Parent{
     public WebElement selectBoxCheck;
 
     @FindBy(xpath = "//div[@class=\"alertX t2\"]")
-    public WebElement aletBoxLastName;
+    public WebElement alertBox;
 
     @FindBy(xpath = "//input[@id=\"life\"]")
     public WebElement emailInputLoginPage;

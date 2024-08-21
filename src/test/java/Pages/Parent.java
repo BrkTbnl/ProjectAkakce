@@ -55,7 +55,7 @@ public class Parent {
 
     public void hoverOverElement(WebElement element) {
         Actions actions = new Actions(GWD.getDriver());
-        actions.moveToElement(element).perform();
+        actions.moveToElement(element).build().perform();
     }
 
 

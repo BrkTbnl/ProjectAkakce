@@ -33,6 +33,6 @@ public class testCase0102 {
 
     @Then("an error message is displayed")
     public void anErrorMessageIsDisplayed() {
-        dc.verifyContainsText(dc.aletBoxLastName,"Lütfen soyadınızı yazın");
+        dc.verifyContainsText(dc.alertBox,"Lütfen soyadınızı yazın");
     }
 }
