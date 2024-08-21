@@ -3,7 +3,6 @@
 #3. The user fills the required information completely.
 #4. Click the ""Create Account"" button.")
 
-
 Feature: Akakce.com Account Creation
   As a user
   I want to create an account on akakce.com

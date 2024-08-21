@@ -58,6 +58,9 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "(//*[text()=\"Seçin\"])[2]")
     public WebElement selectBoxCheck;
 
+    @FindBy(xpath = "//div[@class=\"alertX t2\"]")
+    public WebElement aletBoxLastName;
+
 
     public WebElement getWebElement(String strElement){
         switch (strElement){
