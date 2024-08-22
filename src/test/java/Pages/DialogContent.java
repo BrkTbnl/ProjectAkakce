@@ -85,10 +85,17 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "//div[@id=\"user-order-info\"]/div")
     public WebElement myOrderInfo;
 
-
-
     @FindBy(xpath = "//div[@class=\"wbb_v8\"]/p")
     public WebElement messageBoxInfo;
+
+    @FindBy(xpath = "//ul[@id=\"AL\"]/li/a[4]")
+    public WebElement deleteMyAccountButton;
+
+    @FindBy(xpath = "//input[@id=\"p\"]")
+    public WebElement enterPasswordInput;
+
+
+
 
     public WebElement getWebElement(String strElement){
         switch (strElement){
