@@ -15,6 +15,7 @@ public class testCase0501 {
     @And("the user enters invalid password")
     public void theUserEntersInvalidPassword() {
         dc.mySendKeys(dc.enterPasswordInput,"123qwe123");
+        dc.myJSClick(dc.deleteAccConfirmButton);
     }
 
     @Then("An error message should be displayed")
