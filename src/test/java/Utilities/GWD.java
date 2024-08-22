@@ -32,6 +32,7 @@ public class GWD {
                     break;
                 case "chrome":
                     threadDriver.set(new ChromeDriver());
+
                     break;
                 default:
                     threadDriver.set(new FirefoxDriver());

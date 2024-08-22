@@ -26,7 +26,6 @@ public class testCase0101 {
     @When("enter all required information and click Submit")
     public void enterAllRequiredInformationAndClickSubmit() throws InterruptedException {
 
-
         dc.mySendKeys(dc.nameInput,"bob");
         dc.mySendKeys(dc.lastNameInput,"tester");
         dc.mySendKeys(dc.emailInput,"testerBob@gmail.com");
@@ -43,7 +42,6 @@ public class testCase0101 {
         dc.myJSClick(dc.acceptButton);
         dc.myJSClick(dc.accept2Button);
         dc.myJSClick(dc.submitButton);
-
 
     }
 
