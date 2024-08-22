@@ -73,6 +73,17 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "//a[@href=\"#Çık\"]")
     public WebElement logoutButton;
 
+    @FindBy(xpath = "//a[@href=\"/akakcem/\"]")
+    public WebElement myAccountButton;
+
+    @FindBy(xpath = "(//ul[@id=\"AL\"]/li/a[1])[1]")
+    public WebElement myOrdersButton;
+
+    @FindBy(xpath = "//div[@id=\"user-order-info\"]/div")
+    public WebElement myOrderInfo;
+
+
+
     public WebElement getWebElement(String strElement){
         switch (strElement){
             case "name": return this.nameInput;
