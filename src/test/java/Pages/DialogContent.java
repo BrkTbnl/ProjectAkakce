@@ -94,6 +94,12 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "//input[@id=\"p\"]")
     public WebElement enterPasswordInput;
 
+    @FindBy(xpath = "//input[@id=\"u\"]")
+    public WebElement deleteAccConfirmButton;
+
+    @FindBy(xpath = "//ul[@class=\"cul\"]/li/p/i")
+    public WebElement deleteAccMessage;
+
 
 
 
